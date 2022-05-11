@@ -12,11 +12,11 @@ module.exports = (sequelize) => {
         allowNull: false,
         primaryKey: true,
       },
-      concepto: {
-        type: DataTypes.STRING,
+      date: {
+        type: DataTypes.DATEONLY,
         allowNull: false,
       },
-      categoria: {
+      category: {
         type: DataTypes.ENUM(
           'refrigerios',
           'transporte',
@@ -29,20 +29,13 @@ module.exports = (sequelize) => {
         ),
         allowNull: false,
       },
-      fecha: {
-        type: DataTypes.DATEONLY,
+      description: {
+        type: DataTypes.STRING,
         allowNull: false,
       },
-      ingreso: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-      },
-      engreso: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-      },
-      balance: {
-        type: DataTypes.INTEGER,
+
+      operation: {
+        type: DataTypes.ENUM('ingreso', 'egreso'),
         allowNull: false,
       },
     },

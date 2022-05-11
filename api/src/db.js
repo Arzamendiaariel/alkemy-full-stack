@@ -3,8 +3,8 @@
 
 require('dotenv').config();
 const { Sequelize, Op } = require('sequelize');
-const modelAmb = require('./Models/Amb.js');
 const { DB_USER, DB_PASSWORD, DB_HOST } = process.env;
+const modelAmb = require('./Models/Amb.js');
 
 const sequelize = new Sequelize(
   `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/abm`,
